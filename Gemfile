@@ -41,5 +41,8 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Behavior driven development for Ruby
+  gem 'rspec', '~> 3.2'
 end
 
