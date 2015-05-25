@@ -1,0 +1,17 @@
+<div class="header">
+  <div class="container">
+    <h1>Posts</h1>
+  </div>
+</div>
+
+<div class="messages">
+  <div class="container">
+    <% @posts.each do |post| %>
+      <div class="post">
+        <h2><%= post.title %></a></h2>
+        <p><%= post.text %></p>
+        <%= link_to 'Permalink', post %>
+      </div>
+    <% end %>
+  </div>
+</div>
