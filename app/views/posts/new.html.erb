@@ -1,5 +1,12 @@
 <%= form_for @post, url: {action: "new"} do |f| %>
-  <%= f.text_field :title %>
-  <%= f.text_area :text, size: "60x12" %>
-  <%= f.submit "Create" %>
+  <fieldset>
+    <legend>Post</legend>
+    <%= label_tag 'title' %>
+    <%= f.text_field :title %>
+    <br>
+    <%= label_tag 'body' %>
+    <%= f.text_area :text, size: "60x12" %>
+    <br>
+    <%= f.submit "Create" %>
+  </fieldset>
 <% end %>
