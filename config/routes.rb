@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   resources :posts
 
   get 'posts/:id' => 'post#show'
+  post 'posts/new' => 'posts#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
