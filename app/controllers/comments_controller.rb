@@ -7,7 +7,8 @@ class CommentsController < ApplicationController
   
   def create
     post = Post.find_by(id: params[:post_id])
-    post.comments.create(comment: params[:comment])
+    comment = params[:comment]
+    post.comments.create(comment: comment[:comment])
     redirect_to '/posts/'
   end
 
