@@ -6,10 +6,13 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'posts#index'
 
-  resources :posts
+  resources :posts, :comments
 
   get 'posts/:id' => 'post#show'
   post 'posts/new' => 'posts#create'
+
+  get 'comment/:post_id' => 'comments#new'
+  post 'comment/:post_id' => 'comments#create'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
