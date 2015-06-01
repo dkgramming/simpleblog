@@ -14,7 +14,7 @@
         <h3>Comments</h3>
         <ul>
         <% post.comments.each do |comment| %>
-          <li><%= comment.comment %> <%= comment.created_at %></li>
+          <li><%= comment.comment %></li>
         <% end %>
         </ul>
         <a href="/comment/<%= post.id %>">Comment</a>
